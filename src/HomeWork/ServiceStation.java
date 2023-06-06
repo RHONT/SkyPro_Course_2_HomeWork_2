@@ -16,8 +16,10 @@ public class ServiceStation {
             } else if (categoryForWork.equals("B")) {
                 diagnostic((Car) wheelTransport);
 
-            } else if (categoryForWork.equals("C")); {
+
+            } else if (categoryForWork.equals("C")) {
                 diagnostic((Truck) wheelTransport);
+
             }
         }
     }
