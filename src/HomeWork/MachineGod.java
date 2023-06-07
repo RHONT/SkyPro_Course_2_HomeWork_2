@@ -1,34 +1,33 @@
 package HomeWork;
 
-public abstract class MachineGod  implements WheelTransport {
+public abstract class MachineGod  implements SelfCheckTransport {
     private final String modelName;
-    private final int wheelsCount;
-    protected String category;
+    protected int wheelsCount;
 
-
+    public MachineGod(String modelName) {
+        this.modelName = modelName;
+    }
     public MachineGod(String modelName, int wheelsCount) {
         this.modelName = modelName;
+        this.wheelsCount=wheelsCount;
+    }
+
+    public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
 
-    public void updateTyre() {
+    private void updateTyre() {
         System.out.println("Меняем покрышку");
-    }
-
-    public String getModelName() {
-        return modelName;
     }
 
     public int getWheelsCount() {
         return wheelsCount;
     }
 
-    @Override
-    public String getCategory() {
-        return category;
+    protected void wheelsWork(){
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
+        }
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
 }

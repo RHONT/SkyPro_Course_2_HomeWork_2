@@ -2,9 +2,13 @@ package HomeWork;
 
 public class Bicycle extends MachineGod {
 
-    public Bicycle(String modelName, int wheelsCount) {
-        super(modelName, wheelsCount);
-        setCategory("A");
+    public Bicycle(String modelName) {
+        super(modelName);
+        setWheelsCount(2);
     }
 
+    @Override
+    public void check() {
+        wheelsWork();
+    }
 }
