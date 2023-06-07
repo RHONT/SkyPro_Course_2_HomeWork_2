@@ -1,4 +1,4 @@
-package HomeWork;
+package HomeWork.Interfaces;
 
 public interface SelfCheckTransport {
     void check();

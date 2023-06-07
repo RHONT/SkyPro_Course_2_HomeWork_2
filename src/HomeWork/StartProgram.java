@@ -1,6 +1,10 @@
 package HomeWork;
 
-public class Main {
+import HomeWork.Transport_Class.Bicycle;
+import HomeWork.Transport_Class.Car;
+import HomeWork.Transport_Class.Truck;
+
+public class StartProgram {
     public static void main(String[] args) {
         Car car = new Car("car1");
         Car car2 = new Car("car2");

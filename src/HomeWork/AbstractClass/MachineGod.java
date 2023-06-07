@@ -1,4 +1,6 @@
-package HomeWork;
+package HomeWork.AbstractClass;
+
+import HomeWork.Interfaces.SelfCheckTransport;
 
 public abstract class MachineGod  implements SelfCheckTransport {
     private final String modelName;
@@ -16,18 +18,8 @@ public abstract class MachineGod  implements SelfCheckTransport {
         this.wheelsCount = wheelsCount;
     }
 
-    private void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
-    }
-
-    protected void wheelsWork(){
-        for (int i = 0; i < getWheelsCount(); i++) {
-            updateTyre();
-        }
     }
 
 }
