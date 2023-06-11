@@ -11,12 +11,7 @@ public class Bicycle extends MachineGod {
 
     @Override
     public void check() {
-        updateTyre();
+        updateTyre(getWheelsCount());
     }
 
-    private void updateTyre(){
-        for (int i = 0; i < getWheelsCount(); i++) {
-            System.out.println("Меняем покрышку");
-        }
-    }
 }

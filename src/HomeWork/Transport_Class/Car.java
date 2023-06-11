@@ -10,17 +10,11 @@ public class Car extends MachineGod {
 
     @Override
     public void check() {
-        updateTyre();
+        updateTyre(getWheelsCount());
         checkEngine();
     }
 
     private void checkEngine() {
         System.out.println("Проверяем двигатель");
-    }
-
-    private void updateTyre(){
-        for (int i = 0; i < getWheelsCount(); i++) {
-            System.out.println("Меняем покрышку");
-        }
     }
 }

@@ -10,7 +10,7 @@ public class Truck extends MachineGod {
 
     @Override
     public void check() {
-        updateTyre();
+        updateTyre(getWheelsCount());
         checkEngine();
         checkTrailer();
     }
@@ -19,10 +19,4 @@ public class Truck extends MachineGod {
         System.out.println("Проверяем двигатель");
     }
     private void checkTrailer() {System.out.println("Проверяем прицеп");}
-
-    private void updateTyre(){
-        for (int i = 0; i < getWheelsCount(); i++) {
-            System.out.println("Меняем покрышку");
-        }
-    }
 }
